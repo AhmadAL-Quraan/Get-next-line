@@ -6,7 +6,7 @@
 /*   By: aqoraan <aqoraan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 19:46:19 by aqoraan           #+#    #+#             */
-/*   Updated: 2026/01/10 17:50:44 by aqoraan          ###   ########.fr       */
+/*   Updated: 2026/01/14 19:57:45 by aqoraan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 static void	cut(int *idx, char *full_string, char *new_string)
 {
-	while (full_string[*idx] != '\n')
+	while (full_string[*idx] && full_string[*idx] != '\n')
 	{
 		new_string[*idx] = full_string[*idx];
 		(*idx)++;
 	}
-	new_string[*idx] = full_string[*idx];
-	(*idx) += 1;
+	if (full_string[*idx] == '\n')
+	{
+		new_string[*idx] = full_string[*idx];
+		(*idx) += 1;
+	}
 	new_string[*idx] = '\0';
 }
 
