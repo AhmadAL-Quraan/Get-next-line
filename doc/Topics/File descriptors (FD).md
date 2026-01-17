@@ -1,5 +1,12 @@
 
 
+process
+  └── fd (int)
+       └── per-process fd table entry
+            └── system-wide open file description
+                 └── inode (actual file)
+
+
 
 ### What is a File Descriptor ?
 
