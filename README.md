@@ -43,5 +43,4 @@ cc -Wall -Wextra -Werror get_next_line.c get_next_line_utils.c main.c -o obj
     - [42-cursus_gitbook](https://42-cursus.gitbook.io/guide/1-rank-01/get_next_line/open-and-read).
 
  * [42-cursus](https://42-cursus.gitbook.io/guide/1-rank-01/get_next_line): A very good.
- * 
->>>>>>> 911e51c (Edit doc)
+   
