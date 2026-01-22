@@ -1,1 +1,1 @@
-
+* The project idea is to read from a FD with  a specific buffer range then add it to a static variable until you reach an end line or end of file, then you gonna print the line that you have got.
