@@ -3,7 +3,7 @@
 
 ## Description 
 
-<<<<<<< HEAD
+
 * The point of this project is to write a function that returns a line read from a file descriptor.
 ## Instruction 
 
@@ -41,7 +41,7 @@ cc -Wall -Wextra -Werror get_next_line.c get_next_line_utils.c main.c -o obj
 - File descriptor concepts:
     - [Linux Documentation](https://docs.kernel.org/filesystems/files.html) – File Descriptors Overview
     - [42-cursus_gitbook](https://42-cursus.gitbook.io/guide/1-rank-01/get_next_line/open-and-read).
-=======
+
  * [42-cursus](https://42-cursus.gitbook.io/guide/1-rank-01/get_next_line): A very good.
  * 
 >>>>>>> 911e51c (Edit doc)
