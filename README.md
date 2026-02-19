@@ -5,6 +5,39 @@
 
 
 * The point of this project is to write a function that returns a line read from a file descriptor.
+
+* `static variables` is one of the important thing in C to keep the address of a variable in memory even if the function that the variable in is finished.
+* File descriptors are an important concept connected with a process. A file descriptor is an index into a file descriptor table maintained by the operating system for each process. This table contains references to open files, sockets, pipes, and other I/O resources. The file descriptor table points to kernel structures that store information about open files, which are connected to the filesystem. This allows the process to read from and write to files using system calls. You can inspect file descriptors of a process in the /proc/<pid>/fd directory.
+
+  ```bash
+  Process
+ └── File Descriptor Table
+      ├── 0 → stdin
+      ├── 1 → stdout
+      ├── 2 → stderr
+      └── 3 → pointer to open file object
+  ```
+* The fd table entries point to kernel open file objects, not directly to files.
+
+```bash
+Process
+ └── FD table
+      └── points to
+           Open File Object (in kernel)
+                └── points to
+                     inode (actual file metadata)
+```
+Kernel maintains:
+* open file table (system-wide)
+* inode table (file metadata)
+* filesystem structures
+  
+This allows:
+* multiple processes to open same file
+* shared offsets
+* permissions control
+
+
 ## Instruction 
 
 *  To compile the project, include the source files in your program compilation command. For example:
