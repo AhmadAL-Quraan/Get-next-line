@@ -10,8 +10,8 @@
 * File descriptors are an important concept connected with a process. A file descriptor is an index into a file descriptor table maintained by the operating system for each process. This table contains references to open files, sockets, pipes, and other I/O resources. The file descriptor table points to kernel structures that store information about open files, which are connected to the filesystem. This allows the process to read from and write to files using system calls. You can inspect file descriptors of a process in the /proc/<pid>/fd directory.
 
   ```bash
-  Process
- └── File Descriptor Table
+  Process ->
+  File Descriptor Table
       ├── 0 → stdin
       ├── 1 → stdout
       ├── 2 → stderr
